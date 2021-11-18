@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5</title>
+
+    <script>
+        navigator.geolocation.getCurrentPosition(
+            function(ergebnis){
+                console.log(ergebnis);
+            },
+            function(fehler){
+                console.log(fehler);
+            }
+        );
+
+
+
+    </script>
+
+
+    <script>
+        function pruefeEmail() {
+            var email= document.forms[0].elements["email"];
+            if(email.value.length <=20) {
+                // gut
+                emai.setCustomValidity(" ");
+               
+                // schlecht 
+                email.setCustomValidity("Die Email- Adresse ist zu lang!");
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <header>
+
+        <h1>Herzlich Willkommen !...</h1>
+    </header>
+<section> 
+    <header>
+        <h3>HTML5...</h3>
+       
+    </header>
+
+    <form onsubmit="pruefeEmail();">
+            
+        date:            <input type="date" name= "date"><br>
+        datetime:        <input type="datetime" name= "datetime"><br>
+        datetime-local:  <input type="datetime-local" name= "datetime-local"><br>
+        email:           <input type="email" name= "email" required onchange="pruefeEmail();"><br>
+        passwort:        <input type="password" name= "passwort"><br>
+        number:          <input type="number" name="number"><br>
+
+        range:           <input type="range" min= "1" max="10" name= "range"><br>
+
+        progress:        <progress name= "progress" min= "1" max= "10" value="4"></progress><br>
+        meter:          <meter name= "meter" min= "1" max= "10" value="5"></meter><br>
+
+        color:          <input type="color" name= "color"><br>
+                         <input type="submit" value="Abschicken">
+ </form>
+ 
+       
+
+
+ 
+   
+    <p>Na, ob das klappt???...</p>
+    <aside>
+        Weitere Informationen
+    </aside>
+
+    <footer>Fussnote...</footer>
+
+</section>
+
+<footer>
+   
+    <nav>
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+        </ul>
+    </nav>
+
+</footer>
+
+</body>
+</html>
